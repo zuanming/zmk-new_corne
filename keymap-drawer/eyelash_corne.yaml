@@ -141,9 +141,9 @@ layers:
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
   - {type: held}
   - {t: CTRLALT, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}

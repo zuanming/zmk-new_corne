@@ -33,6 +33,15 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        enablectrlalt: enablectrlalt {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&tog 1>;
+
+            label = "ENABLECTRLALT";
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -55,13 +64,37 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R  &kp T                                    &mmv MOVE_UP                     &kp Y       &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB     &kp A  &kp S  &kp D     &kp F  &kp G                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&td0        &kp Z  &kp X  &kp C     &kp V  &kp B      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N       &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp LGUI  &mo 1  &kp SPACE                                                                 &kp RETURN  &mo 2  &mo 3
+&kp ESCAPE  &kp Q  &kp W  &kp E      &kp R  &kp T                                    &mmv MOVE_UP                     &kp Y       &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D      &kp F  &kp G                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&td0        &kp Z  &kp X  &kp C      &kp V  &kp B      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N       &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                          &kp LCTRL  &mo 3  &kp SPACE                                                                 &kp RETURN  &mo 4  &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
+        CtrlAlt {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans        &trans                          &trans          &trans         &trans         &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans        &trans                  &trans  &trans  &trans  &trans         &trans         &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans        &trans        &trans            &trans          &trans         &trans         &trans     &trans  &trans  &trans
+                        &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI                                    &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL
+            >;
+
+            label = "CTRLALT";
+        };
+
+        Function {
+            display-name = "Fn";
+            bindings = <
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                             &trans          &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP
+&kp F1                &kp F2                &kp F3           &kp F4           &kp F5           &kp F6                              &trans  &trans  &trans  &kp F7      &kp F8            &kp F9       &kp F10     &kp F11       &kp F12
+&bt BT_PRV            &bt BT_NXT            &trans           &trans           &trans           &trans           &rgb_ug RGB_EFF            &trans          &trans      &trans            &bootloader  &sys_reset  &bt BT_CLR    &trans
+                                                             &trans           &trans           &trans                                                      &trans      &tog 1            &trans
+            >;
+
+            sensor-bindings = <&rgb_encoder>;
+            label = "Function";
         };
 
         Sym {
@@ -70,7 +103,7 @@
 &kp GRAVE  &kp EXCL     &kp AT     &kp HASH       &kp DLLR              &kp LC(LEFT_PARENTHESIS)                    &trans          &kp RIGHT_PARENTHESIS  &kp NUMBER_7  &kp N8        &kp N9        &kp ASTERISK  &kp BSPC
 &trans     &kp PERCENT  &kp CARET  &kp AMPERSAND  &kp NON_US_BACKSLASH  &kp LEFT_BRACE                      &trans  &trans  &trans  &kp RIGHT_BRACE        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS     &kp PLUS
 &trans     &trans       &trans     &none          &none                 &kp LC(LEFT_BRACKET)      &trans            &trans          &kp UNDER              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH     &kp EQUAL
-                                   &trans         &mo 3                 &trans                                                      &trans                 &kp N0        &kp PERIOD
+                                   &trans         &mo 2                 &trans                                                      &trans                 &kp N0        &kp PERIOD
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -79,26 +112,13 @@
         Nav {
             display-name = "NAV";
             bindings = <
-&rgb_ug RGB_ON   &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &trans  &rgb_ug RGB_EFF                             &trans          &trans    &kp PAGE_DOWN   &kp UP_ARROW    &kp PAGE_UP  &kp N0   &trans
-&rgb_ug RGB_OFF  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &trans  &rgb_ug RGB_EFR                     &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT    &kp END  &trans
-&trans           &trans           &trans           &trans           &trans  &trans           &rgb_ug RGB_TOG            &trans          &trans    &trans          &trans          &trans       &trans   &trans
-                                                   &trans           &mo 4   &trans                                                      &trans    &trans          &trans
+&rgb_ug RGB_ON   &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &trans  &rgb_ug RGB_EFF                             &trans          &trans    &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN  &trans   &kp DELETE
+&rgb_ug RGB_OFF  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &trans  &rgb_ug RGB_EFR                     &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp END  &trans
+&trans           &trans           &trans           &trans           &trans  &trans           &rgb_ug RGB_TOG            &trans          &trans    &trans          &trans          &trans         &trans   &trans
+                                                   &trans           &mo 5   &trans                                                      &trans    &trans          &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;
-        };
-
-        Function {
-            display-name = "Fn";
-            bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI                                     &mmv MOVE_UP            &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOLUME_UP
-&kp F1                &kp F2                &kp F3           &kp F4           &kp F5           &kp F6                              &mmv MOVE_LEFT  &kp F8          &kp F9  &kp F7      &kp F8            &kp F9       &kp F10     &kp F11       &kp F12
-&bt BT_PRV            &bt BT_NXT            &trans           &trans           &trans           &trans           &rgb_ug RGB_EFF                    &mmv MOVE_DOWN          &trans      &trans            &bootloader  &sys_reset  &bt BT_CLR    &kp PAUSE_BREAK
-                                                             &trans           &trans           &trans                                                                      &trans      &trans            &trans
-            >;
-
-            sensor-bindings = <&rgb_encoder>;
-            label = "Function";
         };
 
         Mouse {
@@ -108,6 +128,8 @@
 &trans  &trans  &trans          &mkp RCLK       &mkp LCLK        &mkp LCLK  &trans            &trans          &mkp LCLK  &mkp LCLK       &mkp RCLK       &trans           &trans  &trans
                                 &trans          &trans           &trans                                       &trans     &trans          &trans
             >;
+
+            label = "MOUSE";
         };
     };
 };

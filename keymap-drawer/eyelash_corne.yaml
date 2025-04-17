@@ -44,11 +44,11 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
-  - SYMBOL
+  - {t: _, h: SYMBOL}
   - $$mdi:keyboard-space$$
-  - RETURN
-  - NAV
-  - Function
+  - {t: RETURN, h: Function}
+  - {t: '-', h: NAV, s: _}
+  - {t: '$$mdi:backspace$$', h: CTRLALT}
   CTRLALT:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -97,7 +97,7 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - RIGHT GUI
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:apple-keyboard-control$$', type: held}
   Function:
   - $$mdi:brightness-7$$
   - $$mdi:brightness-5$$
@@ -144,9 +144,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: CTRLALT, h: toggle}
   - {type: held}
+  - {t: CTRLALT, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '`', s: '~'}
   - '!'
@@ -201,8 +201,8 @@ layers:
   - RGB SPI
   - RGB SAI
   - RGB HUI
-  - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFF
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PgUp
@@ -214,8 +214,8 @@ layers:
   - RGB SPD
   - RGB SAD
   - RGB HUD
-  - {t: '$$mdi:transfer$$', type: trans}
   - RGB EFR
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

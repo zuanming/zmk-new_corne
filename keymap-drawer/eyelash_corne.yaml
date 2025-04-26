@@ -29,7 +29,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - '&td0'
+  - {t: '&td0', h: '$$mdi:apple-keyboard-shift$$'}
   - Z
   - X
   - C
@@ -48,7 +48,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: RETURN, h: Function}
   - {t: '-', h: NAV, s: _}
-  - {t: '$$mdi:backspace$$', h: CTRLALT}
+  - {t: Sft+F10, h: CTRLALT}
   CTRLALT:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

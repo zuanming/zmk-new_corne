@@ -88,21 +88,10 @@
 &kp ESCAPE  &kp Q                    &kp W  &kp E                    &kp R        &kp T                                    &mmv MOVE_UP                     &kp Y         &kp U        &kp I        &kp O    &kp P                         &kp BSPC
 &kp TAB     &kp A                    &kp S  &kp D                    &kp F        &kp G                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H         &kp J        &kp K        &kp L    &kp SEMI                      &kp SQT
 &none       &mt_hold_t LEFT_SHIFT Z  &kp X  &kp C                    &kp V        &kp B      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N         &kp M        &kp COMMA    &kp DOT  &mt_hold_t RIGHT_SHIFT SLASH  &kp RIGHT_SHIFT
-                                            &mt_hold_t LCTRL ESCAPE  &lt 3 UNDER  &kp SPACE                                                                 &lt 2 RETURN  &lt 4 MINUS  &kp RS(F10)
+                                            &mt_hold_t LCTRL ESCAPE  &lt 2 UNDER  &kp SPACE                                                                 &lt 1 RETURN  &lt 3 MINUS  &kp RS(F10)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-        };
-
-        CtrlAlt {
-            bindings = <
-&trans  &trans  &trans  &trans     &trans        &trans                          &trans          &trans         &trans         &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans        &trans                  &trans  &trans  &trans  &trans         &trans         &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans        &trans        &trans            &trans          &trans         &trans         &trans     &trans  &trans  &trans
-                        &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI                                    &kp RIGHT_GUI  &kp RIGHT_ALT  &kp RCTRL
-            >;
-
-            label = "CTRLALT";
         };
 
         Function {
@@ -124,7 +113,7 @@
 &trans  &kp EXCL                   &kp AT     &kp HASH       &kp DLLR              &kp LEFT_PARENTHESIS                    &trans          &kp RIGHT_PARENTHESIS  &kp NUMBER_7  &kp N8        &kp N9        &kp GRAVE                            &kp BSPC
 &trans  &kp PERCENT                &kp CARET  &kp AMPERSAND  &kp NON_US_BACKSLASH  &kp LEFT_BRACE                  &trans  &trans  &trans  &kp RIGHT_BRACE        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOUBLE_QUOTES                    &trans
 &trans  &mt_tap_t LEFT_SHIFT PLUS  &kp MINUS  &kp ASTERISK   &kp SLASH             &kp LEFT_BRACKET      &trans            &trans          &kp RIGHT_BRACKET      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &mt_hold_t RIGHT_SHIFT SINGLE_QUOTE  &trans
-                                              &trans         &mo 2                 &trans                                                  &trans                 &kp N0        &kp PERIOD
+                                              &trans         &mo 1                 &trans                                                  &trans                 &kp N0        &kp PERIOD
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -136,7 +125,7 @@
 &rgb_ug RGB_ON   &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &trans                             &trans          &trans    &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN  &trans   &kp DELETE
 &rgb_ug RGB_OFF  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &trans                     &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp END  &trans
 &trans           &trans           &trans           &trans           &trans           &trans  &rgb_ug RGB_TOG            &trans          &trans    &trans          &trans          &trans         &trans   &trans
-                                                   &trans           &mo 5            &trans                                             &trans    &trans          &trans
+                                                   &trans           &mo 4            &trans                                             &trans    &trans          &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;

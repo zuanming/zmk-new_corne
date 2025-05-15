@@ -47,7 +47,7 @@ layers:
   - {t: _, h: SYMBOL}
   - $$mdi:keyboard-space$$
   - {t: RETURN, h: Function}
-  - {t: '-', h: NAV, s: _}
+  - {t: '$$mdi:backspace$$', h: NAV}
   - Sft+F10
   Function:
   - {t: '$$mdi:minus-circle-outline$$', type: none}

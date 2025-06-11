@@ -100,9 +100,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp GRAVE  &kp Q                          &kp W  &kp E                             &kp R        &kp T                                    &mmv MOVE_UP                     &kp Y    &kp U            &kp I                        &kp O                    &kp P                        &kp DEL
-&kp LSHFT  &kp A                          &kp S  &kp D                             &kp F        &kp G                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H    &kp J            &kp K                        &kp L                    &kp SEMI                     &kp SQT
-&kp LCTRL  &mt_hold_trigger LEFT_SHIFT Z  &kp X  &kp C                             &kp V        &kp B      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N    &kp M            &auto_shift LS(COMMA) COMMA  &auto_shift LS(DOT) DOT  &auto_shift LS(SLASH) SLASH  &kp RIGHT_ALT
+&kp GRAVE  &kp Q                          &kp W  &kp E                             &kp R        &kp T                                    &mmv MOVE_UP                     &kp Y    &kp U            &kp I                        &kp O                    &kp P                                &kp DEL
+&kp LSHFT  &kp A                          &kp S  &kp D                             &kp F        &kp G                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H    &kp J            &kp K                        &kp L                    &auto_shift LS(SEMICOLON) SEMICOLON  &kp RIGHT_SHIFT
+&kp LCTRL  &mt_hold_trigger LEFT_SHIFT Z  &kp X  &kp C                             &kp V        &kp B      &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N    &kp M            &auto_shift LS(COMMA) COMMA  &auto_shift LS(DOT) DOT  &auto_shift LS(SLASH) SLASH          &kp RIGHT_ALT
                                                  &mt_hold_trigger LEFT_GUI ESCAPE  &lt 1 UNDER  &kp SPACE                                                                 &kp RET  &lt 2 BACKSPACE  &lt 4 DEL
             >;
 

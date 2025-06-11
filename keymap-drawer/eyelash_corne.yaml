@@ -30,7 +30,7 @@ layers:
   - {t: ;, h: Sft+;, s: ':'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
-  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - Z
   - X
   - C
   - V

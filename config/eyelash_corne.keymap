@@ -124,10 +124,10 @@
         Nav {
             display-name = "NAV";
             bindings = <
-&rgb_ug RGB_ON   &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI                             &trans          &trans    &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN  &trans   &trans
-&rgb_ug RGB_OFF  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD                     &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp END  &trans
-&trans           &trans           &trans           &trans           &trans           &trans           &rgb_ug RGB_TOG            &trans          &trans    &trans          &trans          &trans         &trans   &trans
-                                                   &trans           &mo 3            &kp TAB                                                     &trans    &trans          &trans
+&rgb_ug RGB_ON   &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI                             &trans          &trans        &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN  &trans         &trans
+&rgb_ug RGB_OFF  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD                     &trans  &trans  &trans  &kp LG(LEFT)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp RG(RIGHT)  &trans
+&trans           &trans           &trans           &trans           &trans           &trans           &rgb_ug RGB_TOG            &trans          &trans        &trans          &trans          &trans         &trans         &trans
+                                                   &trans           &mo 3            &kp TAB                                                     &trans        &trans          &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;

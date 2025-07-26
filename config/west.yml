@@ -6,6 +6,8 @@ manifest:
       # See:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
+    - name: zuanming
+      url-base: https://github.com/zuanming
   projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
@@ -14,5 +16,21 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: zmk-oled-adapter
+      remote: zuanming
+      revision: main
+    - name: zmk-nice-oled
+      remote: zuanming
+      revision: main
+    - name: zmk-dongle
+      remote: zuanming
+      revision: main
+    - name: zmk-dongle-display
+      remote: zuanming
+      revision: main
   self:
     path: config

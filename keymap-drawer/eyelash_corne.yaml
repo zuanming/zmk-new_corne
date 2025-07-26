@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - {t: '`', s: '~'}
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - $$mdi:backspace-reverse-outline$$
-  - '&mt_hold_trigger LSHFT TAB'
+  - $$mdi:apple-keyboard-control$$
   - A
   - S
   - D
@@ -27,9 +27,9 @@ layers:
   - J
   - K
   - L
-  - '&auto_shift LS(SEMICOLON) SEMICOLON'
+  - {t: '''', h: ;, s: '"'}
+  - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
@@ -39,16 +39,16 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - '&auto_shift LS(COMMA) COMMA'
-  - '&auto_shift LS(DOT) DOT'
-  - '&auto_shift LS(SLASH) SLASH'
-  - $$mdi:apple-keyboard-option$$
-  - '&mt_hold_trigger LEFT_GUI ESCAPE'
-  - {t: _, h: SYMBOL}
+  - {t: ',', s: <}
+  - .
+  - {t: /, s: '?'}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: SYMBOL}
   - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-return$$', h: Function}
   - {t: '$$mdi:backspace$$', h: NAV}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Function}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-option$$'}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
@@ -57,47 +57,47 @@ layers:
   - $
   - (
   - {t: '$$mdi:transfer$$', type: trans}
-  - )
+  - '*'
   - '7'
   - {t: '8', s: '*'}
   - {t: '9', s: (}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-tab$$
   - '%'
   - ^
   - '&'
   - \
-  - '&auto_shift LS(LEFT_BRACKET) LEFT_BRACKET'
+  - {t: Sft+\, s: Sft+|}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&auto_shift RS(RIGHT_BRACKET) RIGHT_BRACKET'
+  - {t: /, s: '?'}
   - '4'
   - {t: '5', s: '%'}
   - '6'
-  - '&auto_shift LS(SQT) SQT'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - +
-  - {t: '-', s: _}
-  - '*'
-  - {t: /, s: '?'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+(
+  - {t: Sft+-, s: Sft+_}
+  - {t: '[', h: 'Sft+[', s: '{'}
+  - {t: ']', h: 'Sft+]', s: '}'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '=', s: +}
+  - {t: ',', s: <}
   - '1'
   - '2'
   - '3'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Function, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '=', s: +}
   - {t: '0', s: )}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - .
   NAV:
   - RGB ON
   - RGB SPI
@@ -204,12 +204,12 @@ layers:
   - F4
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:brightness-5$$
+  - $$mdi:skip-previous$$
+  - PLAY PAUSE
+  - $$mdi:skip-next$$
   - $$mdi:volume-off$$
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
-  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - F5
   - F6
@@ -220,10 +220,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:brightness-7$$
-  - PREVIOUS
-  - PLAY
-  - $$mdi:skip-next$$
-  - {h: '$$mdi:arrow-up-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - $$mdi:brightness-5$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - F9
@@ -242,9 +242,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [2, 3, 4]
   k: $$mdi:apple-keyboard-caps$$

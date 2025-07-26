@@ -35,13 +35,15 @@
 
 / {
     behaviors {
-        as: auto_shift {
+        auto_shift: as {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping_term_ms = <250>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
+            label = "as";
             bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
         };
 
         mt_tap: mt_tap {
@@ -52,7 +54,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            quick-tap-ms = <199>;
         };
 
         mt_hold_while_undecided: mt_hold_while_undecided {
@@ -66,20 +67,19 @@
             hold-trigger-on-release;
         };
 
-        lt_bal: lt_bal {
+        lt_tap: lt_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_BAL";
+            label = "LT_TAP";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
-            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
         };
 
-        oneshot: oneshot {
+        os: oneshot {
             compatible = "zmk,behavior-sticky-key";
-            label = "os";
+            label = "ONESHOT";
             bindings = <&kp>;
             #binding-cells = <1>;
             release-after-ms = <1000>;
@@ -87,15 +87,15 @@
             ignore-modifiers;
         };
 
-        layer_oneshot: lo {
+        lo: layer_oneshot {
             compatible = "zmk,behavior-hold-tap";
-            label = "lo";
-            bindings = <&mo>, <&oneshot>;
+            label = "Layer Oneshot";
+            bindings = <&mo>, <&os>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
             quick-tap-ms = <200>;
+            flavor = "balanced";
             hold-while-undecided;
         };
 
@@ -103,7 +103,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPS_LAYER";
             #binding-cells = <0>;
-            bindings = <&layer_oneshot 1 LEFT_SHIFT>, <&caps_word>;
+            bindings = <&lo 1 LEFT_SHIFT>, <&caps_word>;
+
+            tapping-term-ms = <300>;
         };
     };
 

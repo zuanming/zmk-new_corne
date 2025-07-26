@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
-  - '&layer_oneshot 1 LEFT_SHIFT'
+  - {t: '$$mdi:apple-keyboard-shift$$', h: SYMBOL}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', h: Function}
   - {t: '$$mdi:backspace$$', h: NAV}
@@ -93,7 +93,7 @@ layers:
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Function
+  - {t: Function, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '=', s: +}
   - {t: '0', s: )}

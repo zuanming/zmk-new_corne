@@ -27,7 +27,7 @@ layers:
   - J
   - K
   - L
-  - '&as SEMI SQT'
+  - {t: ;, h: '''', s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z

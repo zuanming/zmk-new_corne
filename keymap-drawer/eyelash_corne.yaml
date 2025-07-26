@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&mt_hold_trigger LSHFT TAB'
   - A
   - S
   - D
@@ -27,7 +27,7 @@ layers:
   - J
   - K
   - L
-  - {t: ;, h: Sft+;, s: ':'}
+  - '&auto_shift LS(SEMICOLON) SEMICOLON'
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
   - Z
@@ -39,11 +39,11 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - {t: ',', h: 'Sft+,', s: <}
-  - {t: ., h: Sft+., s: '>'}
-  - {t: /, h: Sft+/, s: '?'}
+  - '&auto_shift LS(COMMA) COMMA'
+  - '&auto_shift LS(DOT) DOT'
+  - '&auto_shift LS(SLASH) SLASH'
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
+  - '&mt_hold_trigger LEFT_GUI ESCAPE'
   - {t: _, h: SYMBOL}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -68,15 +68,15 @@ layers:
   - ^
   - '&'
   - \
-  - {t: '[', h: 'Sft+[', s: '{'}
+  - '&auto_shift LS(LEFT_BRACKET) LEFT_BRACKET'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: ']', h: 'Sft+]', s: '}'}
+  - '&auto_shift RS(RIGHT_BRACKET) RIGHT_BRACKET'
   - '4'
   - {t: '5', s: '%'}
   - '6'
-  - {t: '''', h: Sft+', s: '"'}
+  - '&auto_shift LS(SQT) SQT'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - +

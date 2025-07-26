@@ -27,7 +27,7 @@ layers:
   - J
   - K
   - L
-  - {t: '''', h: ;, s: '"'}
+  - '&as SEMI SQT'
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: SYMBOL}
+  - '&layer_oneshot 1 LEFT_SHIFT'
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', h: Function}
   - {t: '$$mdi:backspace$$', h: NAV}
@@ -81,8 +81,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+(
   - {t: Sft+-, s: Sft+_}
-  - {t: '[', h: 'Sft+[', s: '{'}
-  - {t: ']', h: 'Sft+]', s: '}'}
+  - '&as LS(LEFT_BRACKET) LEFT_BRACKET'
+  - '&as LS(RIGHT_BRACKET) RIGHT_BRACKET'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -93,7 +93,7 @@ layers:
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Function, type: held}
+  - Function
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '=', s: +}
   - {t: '0', s: )}

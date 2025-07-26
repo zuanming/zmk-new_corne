@@ -1,9 +1,9 @@
 ---
 include:
-  - board: eyelash_corne_left
+  - board: eyelash_corne_left nice_oled
     shield: nice_view
     #snippet: zmk-usb-logging    # Uncomment to log over USB.
-  - board: eyelash_corne_right
+  - board: eyelash_corne_right nice_oled
     shield: nice_view
     #snippet: zmk-usb-logging
   - board: eyelash_corne_left

@@ -81,8 +81,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+(
   - {t: Sft+-, s: Sft+_}
-  - '&as LS(LEFT_BRACKET) LEFT_BRACKET'
-  - '&as LS(RIGHT_BRACKET) RIGHT_BRACKET'
+  - {t: '[', h: 'Sft+[', s: '{'}
+  - {t: ']', h: 'Sft+]', s: '}'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

@@ -758,16 +758,16 @@ rect.held, rect.combo.held {
 <g transform="translate(196, 140)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;as</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">LS(LEFT_B…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">LEFT_BRAC…</tspan>
-</text>
+<text x="0" y="-4" class="key tap">[</text>
+<text x="0" y="24" class="key hold">Sft+[</text>
+<text x="0" y="-24" class="key shifted">{</text>
 </g>
 <g transform="translate(252, 147)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em" style="font-size: 60%">&amp;as</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">LS(RIGHT_…</tspan><tspan x="0" dy="1.2em" style="font-size: 60%">RIGHT_BRA…</tspan>
-</text>
+<text x="0" y="-4" class="key tap">]</text>
+<text x="0" y="24" class="key hold">Sft+]</text>
+<text x="0" y="-24" class="key shifted">}</text>
 </g>
 <g transform="translate(308, 153)" class="key none keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none side"/>
